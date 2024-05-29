@@ -1,33 +1,33 @@
 #!name=QQ_adblock
-#!desc=rt
+#!desc=
 
 [General]
 force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 
 [URL Rewrite]
 # 拦截 adsmind.gdtimg.com 的所有请求
-^https?:\/\/adsmind\.gdtimg\.com\/.* reject
+"^https:\/\/adsmind\.gdtimg\.com\/.*" - reject
 
 # 拦截 sq.bls.mdt.qq.com 的所有请求
-^https?:\/\/sq\.bls\.mdt\.qq\.com\/.* reject
+"^https:\/\/sq\.bls\.mdt\.qq\.com\/.*" - reject
 
 # 拦截 wrapper.cyapi.cn 的所有请求
-^https?:\/\/wrapper\.cyapi\.cn\/.* reject
+"^https:\/\/wrapper\.cyapi\.cn\/.*" - reject
 
 # 拦截 gdtimg.com 的所有请求
-^https?:\/\/.*\.gdtimg\.com\/.* reject
+"^https:\/\/.*\.gdtimg\.com\/.*" - reject
 
 # 拦截 gtimg.cn 的所有请求
-^https?:\/\/.*\.gtimg\.cn\/.* reject
+"^https:\/\/.*\.gtimg\.cn\/.*" - reject
 
 # 拦截 qq-ecommerce.cdn-go.cn 的所有请求
-^https?:\/\/qq-ecommerce\.cdn-go\.cn\/.* reject
+"^https:\/\/qq-ecommerce\.cdn-go\.cn\/.*" - reject
 
 # 拦截 cdn.ark.qq.com 的所有请求
-^https?:\/\/cdn\.ark\.qq\.com\/.* reject
+"^https:\/\/cdn\.ark\.qq\.com\/.*" - reject
 
 # 拦截 sqimg.qq.com 的所有请求
-^https?:\/\/sqimg\.qq\.com\/.* reject
+"^https:\/\/sqimg\.qq\.com\/.*" - reject
 
 [MITM]
 hostname = %APPEND% adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com, sqimg.qq.com
