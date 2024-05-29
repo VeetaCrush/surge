@@ -1,9 +1,23 @@
-#!name=QQTim_adblock
-#!desc=
+#!name=QQ_adblock
+#!desc=RT
 
 [URL Rewrite]
 # 拦截 adsmind.gdtimg.com 的所有请求
 ^https?:\/\/adsmind\.gdtimg\.com\/.* reject
 
+# 拦截 sq.bls.mdt.qq.com 的所有请求
+^https?:\/\/sq\.bls\.mdt\.qq\.com\/.* reject
+
+# 拦截 wrapper.cyapi.cn 的所有请求
+^https?:\/\/wrapper\.cyapi\.cn\/.* reject
+
+# 拦截 gdtimg.com 的所有请求
+^https?:\/\/.*\.gdtimg\.com\/.* reject
+
+# 拦截 gtimg.cn 的所有请求
+^https?:\/\/.*\.gtimg\.cn\/.* reject
+
+
 [MITM]
-hostname = adsmind.gdtimg.com
+hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn
+
