@@ -1,5 +1,8 @@
 #!name=QQ_adblock
-#!desc=RT
+#!desc=rt
+
+[General]
+force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 
 [URL Rewrite]
 # 拦截 adsmind.gdtimg.com 的所有请求
@@ -27,4 +30,4 @@
 ^https?:\/\/sqimg\.qq\.com\/.* reject
 
 [MITM]
-hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com, sqimg.qq.com
+hostname = %APPEND% adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com, sqimg.qq.com
