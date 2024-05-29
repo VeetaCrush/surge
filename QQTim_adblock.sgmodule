@@ -17,5 +17,11 @@
 # 拦截 gtimg.cn 的所有请求
 ^https?:\/\/.*\.gtimg\.cn\/.* reject
 
+# 拦截 qq-ecommerce.cdn-go.cn 的所有请求
+^https?:\/\/qq-ecommerce\.cdn-go\.cn\/.* reject
+
+# 拦截 cdn.ark.qq.com 的所有请求
+^https?:\/\/cdn\.ark\.qq\.com\/.* reject
+
 [MITM]
-hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn
+hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com
