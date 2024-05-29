@@ -23,5 +23,8 @@
 # 拦截 cdn.ark.qq.com 的所有请求
 ^https?:\/\/cdn\.ark\.qq\.com\/.* reject
 
+# 拦截 sqimg.qq.com 的所有请求
+^https?:\/\/sqimg\.qq\.com\/.* reject
+
 [MITM]
-hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com
+hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com, sqimg.qq.com
