@@ -1,0 +1,9 @@
+#!name=QQTim_adblock
+#!desc=
+
+[URL Rewrite]
+# 拦截 adsmind.gdtimg.com 的所有请求
+^https?:\/\/adsmind\.gdtimg\.com\/.* reject
+
+[MITM]
+hostname = adsmind.gdtimg.com
