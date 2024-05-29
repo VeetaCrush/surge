@@ -17,7 +17,5 @@
 # 拦截 gtimg.cn 的所有请求
 ^https?:\/\/.*\.gtimg\.cn\/.* reject
 
-
 [MITM]
 hostname = adsmind.gdtimg.com, sq.bls.mdt.qq.com, wrapper.cyapi.cn, *.gdtimg.com, *.gtimg.cn
-
