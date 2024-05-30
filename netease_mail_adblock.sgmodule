@@ -13,5 +13,20 @@
 # 屏蔽 mail-activity.nos-jd.163yun.com
 ^https?:\/\/mail-activity\.nos-jd\.163yun\.com\/.* reject
 
+# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/web.business.image/ 后面无论什么内容
+^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/web\.business\.image\/.* reject
+
+# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/ad-app-package/ 后面无论什么内容
+^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/ad-app-package\/.* reject
+
+# 屏蔽 mobads.baidu.com
+^https?:\/\/mobads\.baidu\.com\/.* reject
+
+# 屏蔽 mobads-logs.baidu.com
+^https?:\/\/mobads-logs\.baidu\.com\/.* reject
+
+# 屏蔽 cdn.mobrtb.com
+^https?:\/\/cdn\.mobrtb\.com\/.* reject
+
 [MITM]
-hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com
+hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com
