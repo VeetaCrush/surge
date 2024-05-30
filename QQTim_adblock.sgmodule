@@ -22,6 +22,7 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 
 [Script]
 http-response ^https:\/\/.*\.(qq\.com|gdtimg\.com|gtimg\.cn)\/.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/VeetaCrush/surge/main/remove_ads.js
+http-response ^https:\/\/.*\.(qq\.com|gdtimg\.com|gtimg\.cn)\/.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/VeetaCrush/surge/main/remove_suggestions.js
 
 [MITM]
 hostname = %APPEND% adsmind.gdtimg.com, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, sogaha.cn
