@@ -28,5 +28,14 @@
 # 屏蔽 cdn.mobrtb.com
 ^https?:\/\/cdn\.mobrtb\.com\/.* reject
 
+# 屏蔽 feed-image.baidu.com
+^https?:\/\/feed-image\.baidu\.com\/.* reject
+
+# 屏蔽 p3-sign.douyinpic.com
+^https?:\/\/p3-sign\.douyinpic\.com\/.* reject
+
+# 屏蔽 http://p9-be-pack-sign.pglstatp-toutiao.com/ad.union.api/ 后面无论什么内容
+^http:\/\/p9-be-pack-sign\.pglstatp-toutiao\.com\/ad\.union\.api\/.* reject
+
 [MITM]
-hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com
+hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com, feed-image.baidu.com, p3-sign.douyinpic.com, p9-be-pack-sign.pglstatp-toutiao.com
