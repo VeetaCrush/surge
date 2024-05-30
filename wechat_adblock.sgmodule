@@ -1,0 +1,13 @@
+#!name=WeChat_adblock
+#!desc=Block ads in WeChat
+
+[General]
+force-http-engine-hosts = %APPEND% 101.227.132.78, 101.227.132.126
+
+[URL Rewrite]
+# 屏蔽微信公众号广告与朋友圈广告
+"^http:\/\/101\.227\.132\.78\/mmtls\/.*" - reject
+"^http:\/\/101\.227\.132\.126\/mmtls\/.*" - reject
+
+[MITM]
+hostname = %APPEND% 101.227.132.78, 101.227.132.126
