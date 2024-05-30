@@ -46,5 +46,11 @@
 # 屏蔽 sf3-fe-tos.pglstatp-toutiao.com 并返回空白响应
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
+# 屏蔽 https://feed-image.baidu.com/0/pic/ 并返回空白响应
+^https:\/\/feed-image\.baidu\.com\/0\/pic\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
+
+# 屏蔽 https://cdn.mobrtb.com/whale/static/ 并返回空白响应
+^https:\/\/cdn\.mobrtb\.com\/whale\/static\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
+
 [MITM]
 hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com, feed-image.baidu.com, p3-sign.douyinpic.com, p9-be-pack-sign.pglstatp-toutiao.com, sf3-fe-tos.pglstatp-touotiao.com, onegoods.nosdn.127.net, sf3-fe-tos.pglstatp-toutiao.com
