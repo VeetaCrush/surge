@@ -1,0 +1,18 @@
+#!name=12306_adblock
+#!desc=去除12306广告
+
+# author=@ddgksf2013
+
+[General]
+
+[URL Rewrite]
+# 拦截 ad.12306.cn 的广告请求，并执行指定的脚本
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://github.com/ddgksf2013/Scripts/raw/master/12306.js
+
+[Script]
+# 处理 ad.12306.cn 的 HTTP 响应，脚本路径指向指定的脚本URL
+http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max-size=0, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
+
+[MITM]
+# 指定需要进行中间人攻击的域名
+hostname = %APPEND% ad.12306.cn
