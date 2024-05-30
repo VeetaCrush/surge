@@ -8,9 +8,6 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 # 拦截 adsmind.gdtimg.com 的所有请求
 "^https:\/\/adsmind\.gdtimg\.com\/.*" - reject
 
-# 拦截 sq.bls.mdt.qq.com 的所有请求
-"^https:\/\/sq\.bls\.mdt\.qq\.com\/.*" - reject
-
 # 拦截 gdtimg.com 的所有请求
 "^https:\/\/.*\.gdtimg\.com\/.*" - reject
 
@@ -27,4 +24,4 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 http-response ^https:\/\/.*\.(qq\.com|gdtimg\.com|gtimg\.cn)\/.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/VeetaCrush/surge/main/remove_ads.js
 
 [MITM]
-hostname = %APPEND% adsmind.gdtimg.com, sq.bls.mdt.qq.com, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, sogaha.cn
+hostname = %APPEND% adsmind.gdtimg.com, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, sogaha.cn
