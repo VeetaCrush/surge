@@ -1,4 +1,4 @@
-#!name=QQ_adblock
+#!name=QQTim_adblock
 #!desc=
 
 [General]
@@ -7,6 +7,9 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 [URL Rewrite]
 # 拦截 adsmind.gdtimg.com 的所有请求
 "^https:\/\/adsmind\.gdtimg\.com\/.*" - reject
+
+# 拦截 sq.bls.mdt.qq.com 的所有请求
+"^https:\/\/sq\.bls\.mdt\.qq\.com\/.*" - reject
 
 # 拦截 gdtimg.com 的所有请求
 "^https:\/\/.*\.gdtimg\.com\/.*" - reject
@@ -17,12 +20,20 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 # 拦截 qq-ecommerce.cdn-go.cn 的所有请求
 "^https:\/\/qq-ecommerce\.cdn-go\.cn\/.*" - reject
 
+# 拦截 cdn.ark.qq.com 的所有请求
+"^https:\/\/cdn\.ark\.qq\.com\/.*" - reject
+
+# 拦截 sqimg.qq.com 的所有请求
+"^https:\/\/sqimg\.qq\.com\/.*" - reject
+
 # 拦截 sogaha.cn 的所有请求
 "^https?:\/\/.*\.sogaha\.cn\/.*" - reject
 
+# 拦截 img.gamecenter.qq.com 的所有请求
+"^https?:\/\/img\.gamecenter\.qq\.com\/.*" - reject
+
 [Script]
 http-response ^https:\/\/.*\.(qq\.com|gdtimg\.com|gtimg\.cn)\/.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/VeetaCrush/surge/main/remove_ads.js
-http-response ^https:\/\/.*\.(qq\.com|gdtimg\.com|gtimg\.cn)\/.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/VeetaCrush/surge/main/remove_suggestions.js
 
 [MITM]
-hostname = %APPEND% adsmind.gdtimg.com, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, sogaha.cn
+hostname = %APPEND% adsmind.gdtimg.com, sq.bls.mdt.qq.com, *.gdtimg.com, *.gtimg.cn, qq-ecommerce.cdn-go.cn, cdn.ark.qq.com, sqimg.qq.com, sogaha.cn, img.gamecenter.qq.com
