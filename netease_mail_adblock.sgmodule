@@ -10,5 +10,8 @@
 # 屏蔽 http://oimagea5.ydstatic.com/image 后面无论什么内容
 ^http:\/\/oimagea5\.ydstatic\.com\/image\/.* reject
 
+# 屏蔽 mail-activity.nos-jd.163yun.com
+^https?:\/\/mail-activity\.nos-jd\.163yun\.com\/.* reject
+
 [MITM]
-hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com
+hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com
