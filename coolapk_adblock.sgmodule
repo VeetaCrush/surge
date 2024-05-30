@@ -1,0 +1,26 @@
+#!name=酷安净化
+#!desc=去除酷安的广告和热词
+#!author=ddgksf2013
+
+[General]
+
+[URL Rewrite]
+# 酷安_开屏广告
+^https?:\/\/api.coolapk.com\/v6\/main\/init url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# 酷安_推广广告
+^https?:\/\/api.coolapk.com\/v6\/dataList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# 酷安_首页广告
+^https?:\/\/api.coolapk.com\/v6\/main\/indexV8 url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# 酷安_评论广告
+^https?:\/\/api.coolapk.com\/v6\/feed\/replyList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# 酷安_商品推广
+^https?:\/\/api.coolapk.com\/v6\/feed\/detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# 酷安_屏蔽热词
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject
+
+[Script]
+# 酷安广告和热词过滤脚本
+http-response ^https?:\/\/api.coolapk.com\/v6\/(main\/init|dataList|main\/indexV8|feed\/replyList|feed\/detail) requires-body=1, max-size=0, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+
+[MITM]
+hostname = %APPEND% api.coolapk.com
