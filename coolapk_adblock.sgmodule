@@ -18,9 +18,12 @@
 # 酷安_屏蔽热词
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject
 
+# 屏蔽拼多多广告
+^https?:\/\/images\.pinduoduo\.com\/.* reject
+
 [Script]
 # 酷安广告和热词过滤脚本
 http-response ^https?:\/\/api.coolapk.com\/v6\/(main\/init|dataList|main\/indexV8|feed\/replyList|feed\/detail) requires-body=1, max-size=0, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 
 [MITM]
-hostname = %APPEND% api.coolapk.com
+hostname = %APPEND% api.coolapk.com, images.pinduoduo.com
