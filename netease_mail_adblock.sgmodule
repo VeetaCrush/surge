@@ -4,38 +4,44 @@
 [General]
 
 [URL Rewrite]
-# 屏蔽 mobads-pre-config.cdn.bcebos.com
-^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/.* reject
+# 屏蔽 mobads-pre-config.cdn.bcebos.com 并返回空白响应
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 http://oimagea5.ydstatic.com/image 后面无论什么内容
-^http:\/\/oimagea5\.ydstatic\.com\/image\/.* reject
+# 屏蔽 http://oimagea5.ydstatic.com/image 后面无论什么内容 并返回空白响应
+^http:\/\/oimagea5\.ydstatic\.com\/image\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 mail-activity.nos-jd.163yun.com
-^https?:\/\/mail-activity\.nos-jd\.163yun\.com\/.* reject
+# 屏蔽 mail-activity.nos-jd.163yun.com 并返回空白响应
+^https?:\/\/mail-activity\.nos-jd\.163yun\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/web.business.image/ 后面无论什么内容
-^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/web\.business\.image\/.* reject
+# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/web.business.image/ 后面无论什么内容 并返回空白响应
+^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/web\.business\.image\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/ad-app-package/ 后面无论什么内容
-^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/ad-app-package\/.* reject
+# 屏蔽 http://p26-be-pack-sign.pglstatp-toutiao.com/ad-app-package/ 后面无论什么内容 并返回空白响应
+^http:\/\/p26-be-pack-sign\.pglstatp-toutiao\.com\/ad-app-package\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 mobads.baidu.com
-^https?:\/\/mobads\.baidu\.com\/.* reject
+# 屏蔽 mobads.baidu.com 并返回空白响应
+^https?:\/\/mobads\.baidu\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 mobads-logs.baidu.com
-^https?:\/\/mobads-logs\.baidu\.com\/.* reject
+# 屏蔽 mobads-logs.baidu.com 并返回空白响应
+^https?:\/\/mobads-logs\.baidu\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 cdn.mobrtb.com
-^https?:\/\/cdn\.mobrtb\.com\/.* reject
+# 屏蔽 cdn.mobrtb.com 并返回空白响应
+^https?:\/\/cdn\.mobrtb\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 feed-image.baidu.com
-^https?:\/\/feed-image\.baidu\.com\/.* reject
+# 屏蔽 feed-image.baidu.com 并返回空白响应
+^https?:\/\/feed-image\.baidu\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 p3-sign.douyinpic.com
-^https?:\/\/p3-sign\.douyinpic\.com\/.* reject
+# 屏蔽 p3-sign.douyinpic.com 并返回空白响应
+^https?:\/\/p3-sign\.douyinpic\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
-# 屏蔽 http://p9-be-pack-sign.pglstatp-toutiao.com/ad.union.api/ 后面无论什么内容
-^http:\/\/p9-be-pack-sign\.pglstatp-toutiao\.com\/ad\.union\.api\/.* reject
+# 屏蔽 http://p9-be-pack-sign.pglstatp-toutiao.com/ad.union.api/ 后面无论什么内容 并返回空白响应
+^http:\/\/p9-be-pack-sign\.pglstatp-toutiao\.com\/ad\.union\.api\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
+
+# 屏蔽 sf3-fe-tos.pglstatp-touotiao.com 并返回空白响应
+^https?:\/\/sf3-fe-tos\.pglstatp-touotiao\.com\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
+
+# 屏蔽 onegoods.nosdn.127.net 并返回空白响应
+^https?:\/\/onegoods\.nosdn\.127\.net\/.* url script-response-body https://raw.githubusercontent.com/VeetaCrush/surge/main/reject-200.js
 
 [MITM]
-hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com, feed-image.baidu.com, p3-sign.douyinpic.com, p9-be-pack-sign.pglstatp-toutiao.com
+hostname = %APPEND% mobads-pre-config.cdn.bcebos.com, oimagea5.ydstatic.com, mail-activity.nos-jd.163yun.com, p26-be-pack-sign.pglstatp-toutiao.com, mobads.baidu.com, mobads-logs.baidu.com, cdn.mobrtb.com, feed-image.baidu.com, p3-sign.douyinpic.com, p9-be-pack-sign.pglstatp-toutiao.com, sf3-fe-tos.pglstatp-touotiao.com, onegoods.nosdn.127.net
