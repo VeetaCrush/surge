@@ -8,9 +8,6 @@ force-http-engine-hosts = %APPEND% *.gdtimg.com, *.gtimg.cn
 # 拦截 adsmind.gdtimg.com 的所有请求
 "^https:\/\/adsmind\.gdtimg\.com\/.*" - reject
 
-# 拦截 sq.bls.mdt.qq.com 的所有请求
-"^https:\/\/sq\.bls\.mdt\.qq\.com\/.*" - reject
-
 # 拦截 gdtimg.com 的所有请求
 "^https:\/\/.*\.gdtimg\.com\/.*" - reject
 
